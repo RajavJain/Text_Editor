@@ -7,27 +7,19 @@ export default function TextForm(props) {
         let newText=text.toUpperCase();
         setText(newText);
     }
-
     const handleLoClick=()=>{
         console.log("Button was Clicked");
         let newText=text.toLowerCase();
         setText(newText);
     }
-    
-
     const handleClearClick=()=>{
         // alert("Do you Really want to clear the Text?")
         setText("");
     }
-
-    
-
     const handleOnChange=(event)=>{
         console.log("Onchange");
         setText(event.target.value);
     }
-
-
     const handleOnCopy=()=>{
         // console.log("I am Copy Button");
         var copyText=document.getElementById("myBox");
@@ -35,14 +27,11 @@ export default function TextForm(props) {
         copyText.select();
         navigator.clipboard.writeText(copyText.value);
         // alert("Successfully Copied!!");
-
     }
-
     const handleExtraSpaces=()=>{
         var newText=text.split(/[ ]+/);
         setText(newText.join(" "));
     }
-
     const [text,setText]=useState('')
 
     return (

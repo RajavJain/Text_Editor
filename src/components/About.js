@@ -4,9 +4,7 @@ export default function About() {
     let myStyle={
         color: 'red',
         backgroundColor: 'black'
-
     }
-
     return (
         <>
         <div className='container' style={myStyle}>

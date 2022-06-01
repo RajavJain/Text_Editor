@@ -3,7 +3,7 @@ import React from 'react'
 export default function About() {
     let myStyle={
         color: 'red',
-        backgroundColor: 'black'
+        backgroundColor: 'black' 
     }
     return (
         <>

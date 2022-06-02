@@ -50,7 +50,7 @@ export default function About() {
                 </div>
             </div>
             <div className="container my-3">
-            <button type="button" className="btn btn-secondary">Enable Dark Mode</button>
+            {/* <button type="button" className="btn btn-secondary">Enable Dark Mode</button> */}
             </div>
         </div>
         </>

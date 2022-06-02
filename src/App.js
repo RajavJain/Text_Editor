@@ -3,7 +3,15 @@ import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
+import About from './components/About';
+
 import { useState } from 'react';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 // import About from './components/About';
 
@@ -41,18 +49,22 @@ function App() {
 
   return (
     <>
+    {<Router>
       <Navbar title="Text-Utils" about="About Us" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
       <div className="container my-3">
-        <TextForm showAlert={showAlert}heading="Enter the text to analyze below" mode={mode} />
+        <Switch>
+          <Route path="/about">
+            <About/>
+          </Route>
+          <Route path="/">
+          <TextForm showAlert={showAlert}heading="Enter the text to analyze below" mode={mode} />
+          </Route>  
+        </Switch>    
       </div>
-
-      {/* <About/> */}
-
-
-
+      </Router>}
     </>
-  );
+  ); 
 }
 
 export default App;
